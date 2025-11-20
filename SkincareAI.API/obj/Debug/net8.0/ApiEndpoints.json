@@ -1,0 +1,204 @@
+[
+  {
+    "ContainingType": "SkincareAI.API.Controllers.AnalysisController",
+    "Method": "AnalyzeSymptoms",
+    "RelativePath": "api/Analysis/symptoms",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SkincareAI.API.Models.Requests.SymptomAnalysisRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkincareAI.API.Models.Responses.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkincareAI.API.Controllers.ProductsController",
+    "Method": "GetProduct",
+    "RelativePath": "api/Products/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkincareAI.API.Models.Responses.ApiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkincareAI.API.Controllers.ProductsController",
+    "Method": "GetRecommendations",
+    "RelativePath": "api/Products/recommendations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "skinType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "concerns",
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkincareAI.API.Models.Responses.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[SkincareAI.API.Models.Responses.ProductRecommendationResponse, SkincareAI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkincareAI.API.Controllers.ProductsController",
+    "Method": "SearchProducts",
+    "RelativePath": "api/Products/search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SkincareAI.API.Models.Requests.ProductSearchRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkincareAI.API.Models.Responses.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[SkincareAI.API.Models.Responses.ProductRecommendationResponse, SkincareAI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkincareAI.API.Controllers.SkincareController",
+    "Method": "GetAnalysis",
+    "RelativePath": "api/Skincare/analysis/{analysisId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "analysisId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkincareAI.API.Models.Responses.ApiResponse\u00601[[SkincareAI.API.Models.Responses.SkincareAnalysisResponse, SkincareAI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkincareAI.API.Controllers.SkincareController",
+    "Method": "AnalyzeSkin",
+    "RelativePath": "api/Skincare/analyze",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SkincareAI.API.Models.Requests.SkincareAnalysisRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SkincareAI.API.Models.Responses.ApiResponse\u00601[[SkincareAI.API.Models.Responses.SkincareAnalysisResponse, SkincareAI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkincareAI.API.Controllers.SkincareController",
+    "Method": "GetUserHistory",
+    "RelativePath": "api/Skincare/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "SkincareAI.API.Models.Responses.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[SkincareAI.API.Models.Responses.SkincareAnalysisResponse, SkincareAI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SkincareAI.API.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[SkincareAI.API.Controllers.WeatherForecast, SkincareAI.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
